@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VINYL</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class=container>
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="container_icon">
+                <a href="#">
+                    <div class="iconbox"><img src="img/icon1.png" alt=""></div>
+                </a>
+                <a href="#">
+                    <div class="iconbox"><img src="img/icon2.png" alt=""></div>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- 여기까지가 헤더 -->
+
+
+    <!-- 여기부터 섹션 one -->
+    <div class="one">
+        <div class="wrap_photo">
+            <div class="photo">
+                <div class="cover"></div>
+                <img src="img/vinyl1.jpg" alt="">
+            </div>
+
+            <div class="photo">
+                <div class="cover"></div>
+                <img src="img/vinyl2.jpg" alt="">
+            </div>
+        </div>
+        <div class="text_container">
+            <div class="test_obj">Hello</div>
+            <div class="test_obj">Vinyl</div>
+        </div>
+    </div>
+
+    
+
+
+    <!-- 섹션 one 끝-->
+
+    <!-- 여기부터 섹션 two-->
+
+    <div class="two">
+
+        <div class="contents">
+            <div class="section1"><img class="s1" src="img/vinyl3.jpg" alt=""></div>
+        </div>
+        
+        <div class="wavetoearth">
+            <p class="wave">wave to earth</p>
+            <p class="wave">wave to earth</p>
+        </div>
+      
+
+    </div>
+
+
+
+    <!-- 섹션 two 끝-->
+
+    <!-- 여기부터 섹션 three -->
+
+    <div class="three">
+
+
+        <div class="txtbox">
+            <h1>SHOP</h1>
+        </div>
+        <div class="container_box">
+            <div class="box">
+                <div><img src="img/vinyl4.jpg" alt=""></div>
+                <div><img src="img/vinyl5.jpg" alt=""></div>
+                <div><img src="img/vinyl6.jpg" alt=""></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 섹션 three 끝 -->
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.0.min.js"></script>
+
+    <script>
+        //페이지 열리면 이미지 보이게
+        $('.cover').animate({ height: 0 }, 1800);
+
+        //스크롤 하면 이미지 이동
+        $(window).scroll(function() {
+            let ws = $(this).scrollTop();
+            console.log(ws)
+
+            let two = $(".two").offset().top;
+            if(ws>two-500){
+             $(".s1").css({"transform":"translateY(0px)", "opacity":"1"});   
+            }
+        });
+
+        $(window).scroll(function() {
+            let ws = $(this).scrollTop();
+            console.log(ws)
+
+            let wavetoearth = $(".wave").offset().top;
+            if(ws>wavetoearth-600){
+                $(".wave").css({"transform":"translateY(0px)", "opacity":"1"});
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
